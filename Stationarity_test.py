@@ -1,3 +1,12 @@
+'''
+A simple function to test if the timeseries data is stationary or not.
+Data is be made sttionary i.e. statistical parameters should remain constant
+all through the data
+
+
+'''
+
+
 from statsmodels.tsa.stattools import adfuller
 
 def adf_test(series,title=''):
@@ -14,7 +23,7 @@ def adf_test(series,title=''):
         out[f'critical value ({key})']=val
 
     print(out.to_string())          # .to_string() removes the line "dtype: float64"
-    
+
     if result[1] <= 0.05:
         print("Strong evidence against the null hypothesis")
         print("Reject the null hypothesis")
