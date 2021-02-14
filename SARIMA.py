@@ -12,7 +12,7 @@ from pmdarima import auto_arima
 
 
 # Load dataset
-df = pd.read_csv('../Data/co2_mm_mlo.csv')
+df = pd.read_csv('co2_mm_mlo.csv')
 
 #Combine year and date column to get date column
 df['date']=pd.to_datetime(dict(year=df['year'], month=df['month'], day=1))
